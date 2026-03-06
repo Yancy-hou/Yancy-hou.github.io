@@ -1,0 +1,19 @@
+{% include base_path %}
+
+## Selected Publications [Find full list at Google Scholar]
+
+<ul class="home-publications">
+{% for post in site.publications reversed limit: 10 %}
+  <li>
+    {% if post.paperurl %}
+      <a href="{{ post.paperurl }}">{{ post.title }}</a>
+    {% else %}
+      {{ post.title }}
+    {% endif %}
+    <em>{{ post.venue }}</em>, {{ post.date | date: "%Y" }}
+    {% if post.codeurl %}
+      [<a href="{{ post.codeurl }}">code</a>]
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

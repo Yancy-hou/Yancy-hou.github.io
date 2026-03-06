@@ -1,0 +1,9 @@
+# News items for homepage (newest first)
+# Format: date (MM/YYYY), content
+
+- date: "12/2025"
+  content: "Example news item - update in _data/news.yml"
+- date: "11/2025"
+  content: "Another news item"
+- date: "10/2025"
+  content: "Add your news here"
