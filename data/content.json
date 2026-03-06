@@ -1,0 +1,33 @@
+{
+  "name": "Yucun Hou",
+  "subtitle": "Ph.D. Student",
+  "affiliation": "Beijing Normal University; IPLab",
+  "address": "Beijing, China",
+  "email": "hou9021@mail.bnu.edu.cn",
+  "email2": "hou9021@163.com",
+  "social": [
+    { "name": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=uY25q_0AAAAJ" },
+    { "name": "GitHub", "url": "https://github.com/Yancy-hou" }
+  ],
+  "Research Focus": "My research focuses on quantitative PET image reconstruction, physics-guided deep learning, and medical imaging inverse problems.",
+  "publications": [
+    {
+      "citation": "[2025/09] Hou Y, Zhan F, Liu J, et al. Cycle-constrained adversarial denoising convolutional network for PET image denoising: Multi-dimensional validation on large datasets with reader study and real low-dose data[J]. Medical Image Analysis, 2025: 103826.",
+      "boldAuthor": "Hou Y",
+      "boldJournal": "Medical Image Analysis",
+      "code": ""
+    },
+    {
+      "citation": "[2025/12] Yuan Z, Zhan F, Lu H, Hou Y, et al. GPU-based list-mode TOF PET image reconstruction with complete correction techniques[J]. Medical Physics, 2026, 53(1): e70216.",
+      "boldAuthor": "Hou Y",
+      "boldJournal": "Medical Physics",
+      "code": ""
+    }
+  ],
+
+  "activities": [
+    "Conference Reviewer: MICCAI",
+    "Journal Reviewer: TMI, MEDIA"
+  ],
+  "footer": "© Yucun Hou | Last updated: March 2025"
+}

@@ -1,48 +1,37 @@
-# Yancy Hou - 个人主页
+# Yucun Hou - Homepage
 
-学术个人主页。
+Academic personal homepage.
 
-## 在线访问
+## Online
 
-部署到 GitHub Pages 后访问：**https://yancy-hou.github.io/**
+Visit **https://yancy-hou.github.io/** after deploying to GitHub Pages.
 
-## 本地预览
+## Local Preview
 
-直接用浏览器打开 `index.html`，或使用本地服务器：
+1. Edit `data/content.json`, then run in project directory:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File build.ps1
+   ```
+2. Open `index.html` in browser (no local server needed)
 
-```bash
-# Python 3
-python -m http.server 8000
+## Customization
 
-# 然后访问 http://localhost:8000
-```
+Edit `data/content.json` only. Content is separated from structure.
 
-## 自定义内容
+Fields:
+- `name`, `subtitle`, `affiliation`, `address`, `email`: Header info
+- `social`: Array of `{ name, url }` for links
+- `biography`: Bio text
+- `news`: Array of `{ date, text }`
+- `publications`: Array of `{ citation, pdf?, code? }`
+- `activities`: List of service items
 
-编辑 `index.html` 修改以下内容：
+Profile photo: Put `profile.png` in `images/` folder.
 
-- **头部**：姓名、职位、机构、联系方式、社交链接
-- **个人简介**：教育背景、研究经历
-- **最新动态**：按时间倒序添加新闻
-- **代表性论文**：论文标题、作者、发表 venue、PDF/code 链接
-- **课题组**：在读成员、已毕业学生
-- **学术服务**：审稿经历等
+> Run `build.ps1` after editing content.json, then open index.html.
 
-## 目录结构
+## Deploy to GitHub Pages
 
-```
-Yancy-hou.github.io/
-├── index.html          # 主页面
-├── assets/
-│   └── css/
-│       └── style.css   # 样式文件
-├── images/             # 图片资源（如头像）
-└── README.md
-```
-
-## 部署到 GitHub Pages
-
-1. 将仓库推送到 GitHub：`Yancy-hou/Yancy-hou.github.io`
-2. 进入仓库 **Settings** → **Pages**
-3. 在 **Source** 中选择 **main** 分支，**保存**
-4. 等待几分钟后访问 https://yancy-hou.github.io/
+1. Push to `Yancy-hou/Yancy-hou.github.io`
+2. Settings → Pages → Source: main branch
+3. Visit https://yancy-hou.github.io/ after a few minutes
