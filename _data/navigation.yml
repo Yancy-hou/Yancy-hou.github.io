@@ -1,6 +1,0 @@
-# Navigation links in the header.
-# Only CV is shown.
-
-main:
-  - title: "CV"
-    url: /cv/

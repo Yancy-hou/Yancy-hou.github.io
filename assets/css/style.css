@@ -1,0 +1,220 @@
+/* ===== 学术个人主页样式 ===== */
+
+:root {
+    --color-text: #333;
+    --color-text-muted: #666;
+    --color-link: #0066cc;
+    --color-link-hover: #004499;
+    --color-border: #e0e0e0;
+    --color-bg: #fafafa;
+    --max-width: 800px;
+    --font-sans: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-serif: 'Source Serif 4', Georgia, serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--color-text);
+    background: var(--color-bg);
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
+/* ===== 头部 ===== */
+.header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin: 0 0 0.25rem 0;
+    font-family: var(--font-serif);
+}
+
+.header .subtitle {
+    font-size: 1.1rem;
+    color: var(--color-text-muted);
+    margin: 0 0 0.25rem 0;
+}
+
+.header .affiliation {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    margin: 0 0 0.5rem 0;
+}
+
+.header .contact {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin: 0 0 1rem 0;
+}
+
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.social-links a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.social-links a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+}
+
+.social-links a::after {
+    content: "|";
+    margin-left: 1rem;
+    color: var(--color-border);
+}
+
+.social-links a:last-child::after {
+    display: none;
+}
+
+/* ===== 主内容区块 ===== */
+section {
+    margin-bottom: 2rem;
+}
+
+section h2 {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 0 0 1rem 0;
+    font-family: var(--font-serif);
+}
+
+section h2 small {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+section h3 {
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 1.25rem 0 0.5rem 0;
+}
+
+section p, section li {
+    margin: 0 0 0.5rem 0;
+    color: var(--color-text);
+}
+
+section ul {
+    margin: 0;
+    padding-left: 1.5rem;
+}
+
+/* ===== 新闻列表 ===== */
+.news-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.news-list li {
+    margin-bottom: 0.6rem;
+    padding-left: 0;
+}
+
+.news-list .date {
+    display: inline-block;
+    min-width: 5rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+/* ===== 论文列表 ===== */
+.pub-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.pub-list li {
+    margin-bottom: 1.25rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-left: 0;
+}
+
+.pub-list li:last-child {
+    border-bottom: none;
+}
+
+.pub-list a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.pub-list a:hover {
+    text-decoration: underline;
+}
+
+.pub-list .authors {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+}
+
+.pub-list .venue {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--color-text-muted);
+}
+
+.pub-list .links {
+    font-size: 0.9rem;
+}
+
+.pub-list .links a {
+    font-weight: 400;
+}
+
+/* ===== 页脚 ===== */
+footer {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+}
+
+/* ===== 响应式 ===== */
+@media (max-width: 600px) {
+    .container {
+        padding: 1.5rem 1rem;
+    }
+
+    .header h1 {
+        font-size: 1.6rem;
+    }
+
+    .social-links a::after {
+        display: none;
+    }
+
+    .social-links {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
