@@ -23,11 +23,34 @@
       "boldJournal": "Medical Physics",
       "code": ""
     }
+    ],
+  "conferences": [
+    {
+      "citation": "[2025/11] A Diffusion-Based Reconstruction Framework with Posterior Correction for Fast and Quantitatively Accurate PET Imaging, IEEE NSS/MIC/RTSD, 2025, Yokohama, Japan, Poster",
+      "boldAuthor": " Poster",
+      "code": ""
+    },
+    {
+      "citation": "[2025/06] Cycle-Constrained Adversarial Denoising Convolutional Network for PET Image Denoising: Multi-Dimensional Validation on Large Datasets with Reader Study and Real Low-Dose Data, SNMMI, 2025, New Orleans, United States, Oral",
+      "boldAuthor": "Oral",
+      "code": ""
+    },
+    {
+      "citation": "[2025/05] Cycle-Constrained Adversarial Denoising Convolutional Network for PET Image Denoising: Multi-Dimensional Validation on Large Datasets with Reader Study and Real Low-Dose Data, The 18th International Meeting on Fully 3D Image Reconstruction in Radiology and Nuclear Medicine, 2025, Shanghai, China, Poster",
+      "boldAuthor": "Poster",
+      "code": ""
+    },
+    {
+      "citation": "[2024/11] Initial Result of Low-dose PET Image Recovery using Cycle Denoising Adversarial Convolutional Network, IEEE NSS/MIC/RTSD, 2024, Tampa, United States, Poster",
+      "boldAuthor": "Poster",
+      "code": ""
+    }
   ],
-
   "activities": [
     "Conference Reviewer: MICCAI",
     "Journal Reviewer: TMI, MEDIA"
   ],
   "footer": "© Yucun Hou | Last updated: March 2025"
 }
+
+

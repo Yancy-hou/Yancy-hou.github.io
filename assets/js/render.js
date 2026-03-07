@@ -3,6 +3,12 @@
  * Run build.ps1 after editing data/content.json to preview by opening index.html
  */
 
+function boldWord(text, word) {
+    if (!word) return text;
+    const escaped = word.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    return text.replace(new RegExp('\\b' + escaped + '\\b', 'g'), '<strong>$&</strong>');
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     let data;
     const embedded = document.getElementById('content');
@@ -48,15 +54,30 @@ document.addEventListener('DOMContentLoaded', async () => {
     const pubEl = document.querySelector('.pub-list');
     pubEl.innerHTML = data.publications.map(p => {
         let citation = typeof p === 'string' ? p : p.citation;
-        citation = citation.replace(/^(\[\d{4}\/\d{2}\])\s*/, '<strong>$1</strong> ');
+        citation = citation.replace(/^(\[\d{4}\/\d{1,2}\])\s*/, '<strong>$1</strong> ');
         if (typeof p === 'object') {
-            if (p.boldAuthor) citation = citation.split(p.boldAuthor).join('<strong>' + p.boldAuthor + '</strong>');
-            if (p.boldJournal) citation = citation.split(p.boldJournal).join('<strong>' + p.boldJournal + '</strong>');
+            if (p.boldAuthor) citation = boldWord(citation, p.boldAuthor);
+            if (p.boldJournal) citation = boldWord(citation, p.boldJournal);
         }
         let links = '';
         if (typeof p === 'object' && p.code) links += ` [<a href="${p.code}" target="_blank" rel="noopener">code</a>]`;
         return `<li>${citation}${links}</li>`;
     }).join('');
+
+    const confSection = document.querySelector('#conferences');
+    if (data.conferences && data.conferences.length > 0) {
+        const confEl = document.querySelector('.conf-list');
+        confEl.innerHTML = data.conferences.map(p => {
+            let citation = typeof p === 'string' ? p : p.citation;
+            citation = citation.replace(/^(\[\d{4}\/\d{1,2}\])\s*/, '<strong>$1</strong> ');
+            if (typeof p === 'object' && p.boldAuthor) {
+                citation = boldWord(citation, p.boldAuthor);
+            }
+            return `<li>${citation}</li>`;
+        }).join('');
+    } else {
+        confSection?.remove();
+    }
 
     const activitiesEl = document.querySelector('#activities ul');
     activitiesEl.innerHTML = data.activities.map(a => `<li>${a}</li>`).join('');

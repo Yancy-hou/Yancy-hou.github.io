@@ -167,6 +167,16 @@ section ul {
     color: var(--color-text);
 }
 
+/* ===== Conferences list ===== */
+.conf-list {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+.conf-list li {
+    margin-bottom: 1.25rem;
+}
+
 /* ===== Publications list ===== */
 .pub-list {
     list-style-type: square;
