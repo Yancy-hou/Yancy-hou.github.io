@@ -9,7 +9,7 @@
     { "name": "Google Scholar", "url": "https://scholar.google.com/citations?hl=en&user=uY25q_0AAAAJ" },
     { "name": "GitHub", "url": "https://github.com/Yancy-hou" }
   ],
-  "Research Focus": "My research focuses on quantitative PET image reconstruction, physics-guided deep learning, and medical imaging inverse problems.",
+  "Research Focus": "My research focuses on quantitative PET imaging, physics-guided image reconstruction, and deep learning for medical image restoration. I am particularly interested in low-dose PET imaging, deep learning-based reconstruction, generative modeling for PET data augmentation, and data-driven correction methods for quantitative PET imaging. I am also involved in preclinical PET system development, including mechanical design, system assembly, and performance evaluation.",
   "publications": [
     {
       "citation": "[2025/09] Hou Y, Zhan F, Liu J, et al. Cycle-constrained adversarial denoising convolutional network for PET image denoising: Multi-dimensional validation on large datasets with reader study and real low-dose data[J]. Medical Image Analysis, 2025: 103826.",
